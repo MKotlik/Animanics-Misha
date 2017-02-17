@@ -7,6 +7,13 @@
 
 button {
     display: inline;
+    margin: 0 0.5vh 0.5vh 0;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
 }
 
 #TV {
@@ -14,4 +21,3 @@ button {
     border-color: blue;
     border-width: 2px;
 }
-
