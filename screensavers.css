@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: inline;
+}
+
+#TV {
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+
