@@ -43,6 +43,7 @@ var redColor = "#F8333C";
 var redTransparent = "rgba(248, 51, 60, 0.125)";
 var blueColor = "#2B9EB3";
 var blueTransparent = "rgba(43, 158, 179, 0.125)";
+var circleColor = redColor;
 var dvdColorSelector = 1;
 
 /*
@@ -55,24 +56,20 @@ var animateCircle = function(e) {
     //clearCanvas();
 
     var drawCircle = function(e) {
-        if (circleFirst) {
-            ctx.fillStyle = redColor;
-            circleFirst = false;
-        }
-
         ctx.clearRect(0, 0, canW, canH);
         ctx.beginPath();
+        ctx.fillStyle = circleColor;
         ctx.moveTo(centerX + radius, centerY);
         ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
         ctx.fill();
 
         if (radius >= centerX) {
             circleDir = -1;
-            ctx.fillStyle = blueColor;
+            circleColor = blueColor;
         }
         if (radius <= 0) {
             circleDir = 1;
-            ctx.fillStyle = redColor;
+            circleColor = redColor;
         }
 
         radius += circleDir;
